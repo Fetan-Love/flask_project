@@ -4,12 +4,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width", initial-scale = 1>
         <title>{% block title %}FLASK aplikacijos title, galbut pamirsai sukurt man title?{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/stilius.css') }}">
     </head>
 <body>
     <header>
         <h1>
             <a href="{{ url_for('index') }}">Mano FLASK aplikacija</a>
         </h1>
+
+
+<nav>
+    <ul>
+        <li><a href="{{ url_for('index') }}">Pagrindinis</a></li>
+        <li><a href="{{ url_for('kontaktai') }}">Kontaktai</a></li>
+        <li><a href="{{ url_for('apie') }}">Apie mus</a></li>
+    </ul>
+</nav>
     </header>
 
     <div class="container">
